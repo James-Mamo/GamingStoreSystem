@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -47,6 +48,11 @@ namespace GamingStoreCatalougeSystem
                 MessageBox.Show("Invalid Credentials.", "Critical Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 
             }
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

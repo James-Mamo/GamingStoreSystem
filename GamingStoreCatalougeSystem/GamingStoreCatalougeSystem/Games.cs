@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-
+using System.Net.Mail;
 
 namespace GamingStoreCatalougeSystem
 {
@@ -21,6 +21,24 @@ namespace GamingStoreCatalougeSystem
             price = pPrice;
         }
 
+        private static void email()
+        {
+            SmtpClient client = new SmtpClient();
+            client.Port = 587;
+            client.Host = "smtp.office365.com";
+            client.EnableSsl = true;
+            client.Timeout = 10000;
+            client.DeliveryMethod = SmtpDeliveryMethod.Network;
+            client.UseDefaultCredentials = false;
+            client.Credentials = new System.Net.NetworkCredential("gss231112@outlook.com", "test123321");
+            string message = "Data was deleted at " + DateTime.Now.ToString();
+
+            MailMessage mm = new MailMessage("gss231112@outlook.com", "james.mamo.a101038@mcast.edu.mt", "Data deleted from Database", message);
+            mm.BodyEncoding = UTF8Encoding.UTF8;
+            mm.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
+
+            client.Send(mm);
+        }
         public void add()
         {
             
@@ -90,12 +108,14 @@ namespace GamingStoreCatalougeSystem
                 SqlCommand commandDatabase = new SqlCommand(query, databaseConnection);
 
                 SqlDataReader reader;
-
+                
                
                     databaseConnection.Open();
 
                     reader = commandDatabase.ExecuteReader();
                     databaseConnection.Close();
+                    email();
+                  
 
             }
             else

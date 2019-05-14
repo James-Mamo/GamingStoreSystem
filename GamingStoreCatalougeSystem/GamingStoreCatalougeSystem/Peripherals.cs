@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,7 +16,24 @@ namespace GamingStoreCatalougeSystem
         //string connectionString = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = \"I:\\ICT Level 4\\4.2A\\SoftwareProject\\JamesMamoSWD 4.2A\\GamingStoreCatalougeSystem\\Database\\GamingStoreDatabase.mdf\"; Integrated Security = True; Connect Timeout = 30";
 
 
+        private static void email()
+        {
+            SmtpClient client = new SmtpClient();
+            client.Port = 587;
+            client.Host = "smtp.office365.com";
+            client.EnableSsl = true;
+            client.Timeout = 10000;
+            client.DeliveryMethod = SmtpDeliveryMethod.Network;
+            client.UseDefaultCredentials = false;
+            client.Credentials = new System.Net.NetworkCredential("gss231112@outlook.com", "test123321");
+            string message = "Data was deleted at " + DateTime.Now.ToString();
 
+            MailMessage mm = new MailMessage("gss231112@outlook.com", "james.mamo.a101038@mcast.edu.mt", "Data deleted from Database", message);
+            mm.BodyEncoding = UTF8Encoding.UTF8;
+            mm.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
+
+            client.Send(mm);
+        }
 
         public Peripherals(string pName, string pPrice) : base()
         {
@@ -99,7 +117,9 @@ namespace GamingStoreCatalougeSystem
 
                 reader = commandDatabase.ExecuteReader();
                 databaseConnection.Close();
-                MessageBox.Show("Game has been Deleted!");
+                MessageBox.Show("Item has been Deleted!");
+                email();
+
             }
             catch (Exception ex)
             {
