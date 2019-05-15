@@ -70,7 +70,10 @@ namespace GamingStoreCatalougeSystem
 
         private void button5_Click(object sender, EventArgs e)
         {
+            MakeOrder mo = new MakeOrder();
 
+            this.Hide();
+            mo.Show();
         }
     }
 }

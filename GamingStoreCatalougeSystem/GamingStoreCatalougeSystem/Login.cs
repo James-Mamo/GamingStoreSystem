@@ -14,6 +14,9 @@ namespace GamingStoreCatalougeSystem
 {
     public partial class Login : Form
     {
+        public static string username;
+        public static string password;
+
         public Login()
         {
             InitializeComponent();
@@ -27,21 +30,26 @@ namespace GamingStoreCatalougeSystem
         {
 
 
-          
+            username = txtUsername.Text;
+            password = txtPassword.Text;
 
 
-            if(txtUsername.Text == "manager" && txtPassword.Text== "manager123")
+            if(username == "manager" && password== "manager123")
             {
                 this.Hide();
 
-                Manager employee = new Manager();
+                Manager manager = new Manager();
 
-                employee.Show();
+                manager.Show();
 
             }
-            else if(txtUsername.Text == "employee" && txtPassword.Text == "password123")
+            else if(username == "employee" && password == "employee123")
             {
-              //go to employee screen 
+                this.Hide();
+
+                Employee employee = new Employee();
+
+                employee.Show();
             }
             else
             {
