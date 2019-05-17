@@ -37,7 +37,9 @@ namespace GamingStoreCatalougeSystem
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
+            ViewPeripherals vp = new ViewPeripherals();
 
+            vp.Show();
             
         }
 

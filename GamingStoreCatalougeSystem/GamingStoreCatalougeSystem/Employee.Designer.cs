@@ -66,7 +66,7 @@
             // 
             // btnUpdatePerip
             // 
-            this.btnUpdatePerip.Location = new System.Drawing.Point(259, 318);
+            this.btnUpdatePerip.Location = new System.Drawing.Point(259, 317);
             this.btnUpdatePerip.Name = "btnUpdatePerip";
             this.btnUpdatePerip.Size = new System.Drawing.Size(109, 45);
             this.btnUpdatePerip.TabIndex = 3;

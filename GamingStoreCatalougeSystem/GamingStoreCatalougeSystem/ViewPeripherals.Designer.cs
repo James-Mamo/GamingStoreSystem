@@ -110,6 +110,7 @@
             this.Controls.Add(this.listView1);
             this.Name = "ViewPeripherals";
             this.Text = "ViewPeripherals";
+            this.Load += new System.EventHandler(this.ViewPeripherals_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
