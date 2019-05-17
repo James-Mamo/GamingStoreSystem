@@ -26,9 +26,21 @@ namespace GamingStoreCatalougeSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Manager m = new Manager();
-            m.Show();
+            string username = Login.username;
+            string password = Login.password;
+
+            if (username == "manager" && password == "manager123")
+            {
+                this.Hide();
+                Manager m = new Manager();
+                m.Show();
+            }
+            else if (username == "employee" && password == "employee123")
+            {
+                this.Hide();
+                Employee em = new Employee();
+                em.Show();
+            }
         }
     }
 }

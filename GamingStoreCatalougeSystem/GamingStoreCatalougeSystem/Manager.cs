@@ -75,5 +75,13 @@ namespace GamingStoreCatalougeSystem
             this.Hide();
             mo.Show();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Login lo = new Login();
+
+            this.Hide();
+            lo.Show();
+        }
     }
 }

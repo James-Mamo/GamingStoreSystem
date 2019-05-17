@@ -30,5 +30,13 @@ namespace GamingStoreCatalougeSystem
             Manager m = new Manager();
             m.Show();
         }
+
+        private void PeripheralAdd_Load(object sender, EventArgs e)
+        {
+            if(Login.username == "employee" && Login.password == "employee123")
+            {
+                btnAdd.Hide();
+            }
+        }
     }
 }

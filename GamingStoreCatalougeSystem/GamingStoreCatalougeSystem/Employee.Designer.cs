@@ -85,6 +85,7 @@
             this.Controls.Add(this.btnUpdate);
             this.Name = "Employee";
             this.Text = "Employee";
+            this.Load += new System.EventHandler(this.Employee_Load);
             this.ResumeLayout(false);
 
         }

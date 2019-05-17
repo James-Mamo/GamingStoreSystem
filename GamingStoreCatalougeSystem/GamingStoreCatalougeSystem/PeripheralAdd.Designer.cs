@@ -80,6 +80,7 @@
             this.Controls.Add(this.txtPeriphName);
             this.Name = "PeripheralAdd";
             this.Text = "PeripheralAdd";
+            this.Load += new System.EventHandler(this.PeripheralAdd_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
