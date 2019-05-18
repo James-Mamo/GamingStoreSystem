@@ -61,6 +61,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addCustomer.Designer.cs">
+      <DependentUpon>addCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client.cs" />
     <Compile Include="Employee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +134,9 @@
     <Compile Include="ViewPeripherals.Designer.cs">
       <DependentUpon>ViewPeripherals.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="addCustomer.resx">
+      <DependentUpon>addCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Employee.resx">
       <DependentUpon>Employee.cs</DependentUpon>
     </EmbeddedResource>

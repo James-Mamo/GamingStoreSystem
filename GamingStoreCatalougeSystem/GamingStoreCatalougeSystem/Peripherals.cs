@@ -26,7 +26,7 @@ namespace GamingStoreCatalougeSystem
             client.DeliveryMethod = SmtpDeliveryMethod.Network;
             client.UseDefaultCredentials = false;
             client.Credentials = new System.Net.NetworkCredential("gss231112@outlook.com", "test123321");
-            string message = "Data was deleted at " + DateTime.Now.ToString();
+            string message = "Peripheral was deleted at " + DateTime.Now.ToString();
 
             MailMessage mm = new MailMessage("gss231112@outlook.com", "james.mamo.a101038@mcast.edu.mt", "Data deleted from Database", message);
             mm.BodyEncoding = UTF8Encoding.UTF8;

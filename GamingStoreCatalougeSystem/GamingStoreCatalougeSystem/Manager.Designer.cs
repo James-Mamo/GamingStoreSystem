@@ -37,13 +37,14 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnInsert
             // 
             this.btnInsert.BackColor = System.Drawing.Color.Black;
             this.btnInsert.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnInsert.Location = new System.Drawing.Point(125, 197);
+            this.btnInsert.Location = new System.Drawing.Point(83, 158);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnInsert.Size = new System.Drawing.Size(115, 41);
@@ -56,7 +57,7 @@
             // 
             this.button2.BackColor = System.Drawing.Color.Black;
             this.button2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button2.Location = new System.Drawing.Point(125, 259);
+            this.button2.Location = new System.Drawing.Point(83, 300);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(115, 41);
             this.button2.TabIndex = 1;
@@ -68,7 +69,7 @@
             // 
             this.button3.BackColor = System.Drawing.Color.Black;
             this.button3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button3.Location = new System.Drawing.Point(260, 223);
+            this.button3.Location = new System.Drawing.Point(83, 232);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(115, 41);
             this.button3.TabIndex = 2;
@@ -80,7 +81,7 @@
             // 
             this.btnInserPeriph.BackColor = System.Drawing.Color.Black;
             this.btnInserPeriph.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnInserPeriph.Location = new System.Drawing.Point(555, 259);
+            this.btnInserPeriph.Location = new System.Drawing.Point(597, 158);
             this.btnInserPeriph.Name = "btnInserPeriph";
             this.btnInserPeriph.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnInserPeriph.Size = new System.Drawing.Size(115, 41);
@@ -93,7 +94,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Black;
             this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.Location = new System.Drawing.Point(555, 197);
+            this.button1.Location = new System.Drawing.Point(597, 232);
             this.button1.Name = "button1";
             this.button1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.button1.Size = new System.Drawing.Size(115, 41);
@@ -106,7 +107,7 @@
             // 
             this.button4.BackColor = System.Drawing.Color.Black;
             this.button4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button4.Location = new System.Drawing.Point(416, 223);
+            this.button4.Location = new System.Drawing.Point(597, 300);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(115, 41);
             this.button4.TabIndex = 5;
@@ -118,7 +119,7 @@
             // 
             this.button5.BackColor = System.Drawing.Color.Black;
             this.button5.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button5.Location = new System.Drawing.Point(343, 300);
+            this.button5.Location = new System.Drawing.Point(351, 300);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(115, 41);
             this.button5.TabIndex = 6;
@@ -138,6 +139,18 @@
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Black;
+            this.button7.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.button7.Location = new System.Drawing.Point(351, 158);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(115, 41);
+            this.button7.TabIndex = 8;
+            this.button7.Text = "Add Client";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // Manager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -146,6 +159,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -170,5 +184,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
     }
 }
