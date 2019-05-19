@@ -20,15 +20,39 @@ namespace GamingStoreCatalougeSystem
 
         private void btnAddClient_Click(object sender, EventArgs e)
         {
+            
             string name = txtName.Text;
             string surname = txtSurname.Text;
             int telephone = Convert.ToInt32(txtTelephone.Text);
             string idNumber = txtID.Text;
 
-            Client clients = new Client(name,surname,telephone,idNumber);
-            clients.add();
-
+            checkName(name, surname, telephone, idNumber);
+           
             
+        }
+
+
+        private bool checkName (string name, string surname, int telephone, string idNumber)
+        {
+            string telephoneNum = telephone.ToString();
+            Regex r = new Regex("^[a-zA-Z ]+$");
+
+            if((r.IsMatch(name)) && (r.IsMatch(surname)) && (telephoneNum.Length == 8))
+            {
+                Client clients = new Client(name, surname, telephone, idNumber);
+                clients.add();
+
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("Error Invalid credentials");
+                return false;
+            }
+        }
+        private void txtSurname_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
