@@ -69,6 +69,7 @@
             this.txtNameP.Name = "txtNameP";
             this.txtNameP.Size = new System.Drawing.Size(100, 20);
             this.txtNameP.TabIndex = 2;
+            this.txtNameP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNameP_KeyPress);
             // 
             // txtPriceP
             // 
@@ -76,6 +77,7 @@
             this.txtPriceP.Name = "txtPriceP";
             this.txtPriceP.Size = new System.Drawing.Size(100, 20);
             this.txtPriceP.TabIndex = 6;
+            this.txtPriceP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPriceP_KeyPress);
             // 
             // button1
             // 

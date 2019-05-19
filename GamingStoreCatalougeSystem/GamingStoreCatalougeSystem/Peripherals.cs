@@ -103,7 +103,7 @@ namespace GamingStoreCatalougeSystem
             string connectionString = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = \"F:\\ICT Level 4\\4.2A\\SoftwareProject\\JamesMamoSWD 4.2A\\GamingStoreCatalougeSystem\\Database Copies\\GamingStoreDatabase.mdf\";Integrated Security=True;Connect Timeout=30";
             //string connectionString = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = \"I:\\ICT Level 4\\4.2A\\SoftwareProject\\JamesMamoSWD 4.2A\\GamingStoreCatalougeSystem\\Database\\GamingStoreDatabase.mdf\"; Integrated Security = True; Connect Timeout = 30";
 
-            string query = "DELETE FROM Game WHERE [Game ID] = " + id + "";
+            string query = "DELETE FROM Pheripherals WHERE [Pheripheral ID] = " + id + "";
 
 
             SqlConnection databaseConnection = new SqlConnection(connectionString);

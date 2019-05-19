@@ -46,7 +46,7 @@ namespace GamingStoreCatalougeSystem
         {
 
 
-            string query = "INSERT INTO Orders ([Order Name],[Order Description]) VALUES ('" + orderName + "','" + orderDescription + "')";
+            string query = "INSERT INTO Orders (Name,Description) VALUES ('" + orderName + "','" + orderDescription + "')";
 
 
 
@@ -70,5 +70,39 @@ namespace GamingStoreCatalougeSystem
             }
         }
 
+
+        public static void DeleteOrder(string id)
+        {
+
+
+            string connectionString = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = \"F:\\ICT Level 4\\4.2A\\SoftwareProject\\JamesMamoSWD 4.2A\\GamingStoreCatalougeSystem\\Database Copies\\GamingStoreDatabase.mdf\";Integrated Security=True;Connect Timeout=30";
+            //string connectionString = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = \"I:\\ICT Level 4\\4.2A\\SoftwareProject\\JamesMamoSWD 4.2A\\GamingStoreCatalougeSystem\\Database\\GamingStoreDatabase.mdf\"; Integrated Security = True; Connect Timeout = 30";
+
+            string query = "DELETE FROM Orders WHERE [Order ID] = " + id + "";
+
+
+            SqlConnection databaseConnection = new SqlConnection(connectionString);
+            SqlCommand commandDatabase = new SqlCommand(query, databaseConnection);
+
+            SqlDataReader reader;
+
+            try
+            {
+                databaseConnection.Open();
+
+                reader = commandDatabase.ExecuteReader();
+                databaseConnection.Close();
+                MessageBox.Show("Item has been Deleted!");
+                
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Problem with Query");
+                MessageBox.Show(ex.Message);
+            }
+
+
+        }
     }
 }

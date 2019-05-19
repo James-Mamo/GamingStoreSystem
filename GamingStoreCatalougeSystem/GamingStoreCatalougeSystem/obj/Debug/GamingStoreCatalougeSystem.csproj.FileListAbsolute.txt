@@ -37,3 +37,4 @@ I:\ICT Level 4\4.2A\SoftwareProject\JamesMamoSWD 4.2A\GamingStoreCatalougeSystem
 I:\ICT Level 4\4.2A\SoftwareProject\JamesMamoSWD 4.2A\GamingStoreCatalougeSystem\GamingStoreCatalougeSystem\obj\Debug\GamingStoreCatalougeSystem.PeripheraUpdate.resources
 I:\ICT Level 4\4.2A\SoftwareProject\JamesMamoSWD 4.2A\GamingStoreCatalougeSystem\GamingStoreCatalougeSystem\obj\Debug\GamingStoreCatalougeSystem.ViewPeripherals.resources
 F:\ICT Level 4\4.2A\SoftwareProject\JamesMamoSWD 4.2A\GamingStoreCatalougeSystem\GamingStoreCatalougeSystem\obj\Debug\GamingStoreCatalougeSystem.addCustomer.resources
+F:\ICT Level 4\4.2A\SoftwareProject\JamesMamoSWD 4.2A\GamingStoreCatalougeSystem\GamingStoreCatalougeSystem\obj\Debug\GamingStoreCatalougeSystem.View_Order.resources

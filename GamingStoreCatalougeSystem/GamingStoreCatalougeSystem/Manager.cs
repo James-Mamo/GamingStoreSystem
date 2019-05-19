@@ -91,5 +91,13 @@ namespace GamingStoreCatalougeSystem
             this.Hide();
             ac.Show();
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            View_Order vo = new View_Order();
+
+            this.Hide();
+            vo.Show();
+        }
     }
 }

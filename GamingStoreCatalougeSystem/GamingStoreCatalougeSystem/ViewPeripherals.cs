@@ -90,5 +90,15 @@ namespace GamingStoreCatalougeSystem
         {
 
         }
+
+        private void txtNameP_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void txtPriceP_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
     }
 }
