@@ -44,7 +44,7 @@
             this.columnHeader2,
             this.columnHeader3});
             this.listView1.FullRowSelect = true;
-            this.listView1.Location = new System.Drawing.Point(55, 12);
+            this.listView1.Location = new System.Drawing.Point(62, 12);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(673, 120);
             this.listView1.TabIndex = 0;
@@ -95,6 +95,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnDelete);
