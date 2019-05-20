@@ -67,5 +67,12 @@ namespace GamingStoreCatalougeSystem
         {
             Application.Exit();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Help h = new Help();
+            this.Hide();
+            h.Show();
+        }
     }
 }
